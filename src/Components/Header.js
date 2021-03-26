@@ -32,6 +32,10 @@ export default class Header extends Component {
                                     <NavLink className="dropdown-item" to="/carchoosing">Choosing Car Example</NavLink><br/>
                                     <NavLink className="dropdown-item" to="/useeffecthome">UseEffect Home</NavLink><br/>
                                     <NavLink className="dropdown-item" to="/reduxhookhome">Redux Hook Home</NavLink><br/>
+                                    <NavLink className="dropdown-item" to="/hookusecallback">Hook UseCallBack</NavLink><br/>
+                                    <NavLink className="dropdown-item" to="/usememo">Hook UseMemo</NavLink><br/>
+                                    <NavLink className="dropdown-item" to="/useref">Hook UseRef</NavLink><br/>
+                                    <NavLink className="dropdown-item" to="/demoprops">HOC_ParentComponent</NavLink><br/>
                                 </div>
                             </li>
 

@@ -10,7 +10,7 @@ export function RegisterInfor(props) {
 
     const renderInfor = () => {
         return arrInfor.map((infor, index) => {
-            return <tbody>
+            return <tbody className="text-white">
                     <tr key={index}>
                             <td>{infor.account}</td>
                             <td>{infor.email}</td>

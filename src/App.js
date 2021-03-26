@@ -13,17 +13,24 @@ import BaiTapChonXe from './pages/Hooks/BaiTapChonXe';
 import UseEffectHome from './pages/Hooks/UseEffectHome';
 import {ReduxHookHome} from './pages/Hooks/ReduxHookHome';
 import Details from './pages/Details/Details';
+import HookUseCallBack from './pages/Hooks/HookUseCallBack';
+import HookUseDemo from './pages/Hooks/HookUseDemo';
+import UseRef from './pages/Hooks/UseRef';
+import ParentComponent from './pages/HOC/ParentComponent';
+import { HomeTemplate } from './templates/HomeTemplate';
+import { AdminTemplate } from './templates/AdminTemplate';
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
 
-        <Header />
+        {/* <Header /> */}
         <Loading />
         <Switch>
-          <Route path="/home" component={Home} />
-          <Route path="/contact" component={Contact} />
+          {/* <Route path="/home" component={Home} /> */}
+          <HomeTemplate exact path="/home" Component={Home}/>
+          <HomeTemplate path="/contact" Component={Contact} />
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />
           <Route path="/LifeCycle" render={(propsRoute) => {
@@ -33,10 +40,14 @@ function App() {
             </div>
           }} />
           <Route exact path="/usestateDemo" component={UseStateHook} />
+          <Route exact path="/usememo" component={HookUseDemo} />
+          <Route exact path="/useref" component={UseRef} />
           <Route exact path="/carchoosing" component={BaiTapChonXe} />
           <Route exact path="/useeffecthome" component={UseEffectHome} />
           <Route exact path="/reduxhookhome" component={ReduxHookHome} />
+          <Route exact path="/hookusecallback" component={HookUseCallBack} />
           <Route exact path="/details/:id" component={Details} />
+          <Route exact path="/demoprops" component={ParentComponent} />
 
           {/* //Route mac dinh de duoi cung cua ung dung */}
           <Route exact path="/" component={Home} />

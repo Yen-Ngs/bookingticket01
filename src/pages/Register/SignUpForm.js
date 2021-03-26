@@ -44,14 +44,6 @@ class Register extends Component {
                 newErrors[name] =  'Password Confirm is invalid'
             }
         }
-        // if(type === 'email'){
-        //     const regexEmail = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/
-        //     if(!regexEmail.test(value)){
-        //         newErrors[name]= name + ' is invalid! ';
-        //     }else{
-        //         newErrors[name] = ''
-        //     }
-        // }
 
         this.setState({
             values:newValues,
