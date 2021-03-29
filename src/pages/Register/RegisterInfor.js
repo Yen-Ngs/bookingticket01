@@ -37,11 +37,6 @@ export function RegisterInfor(props) {
                         </tr>
                     </thead>
                     {renderInfor()}
-                    {/* <tbody>
-                        <tr>
-                        
-                        </tr>
-                    </tbody> */}
                 </table>
                 
             </div>

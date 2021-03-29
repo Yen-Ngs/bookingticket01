@@ -19,6 +19,7 @@ import UseRef from './pages/Hooks/UseRef';
 import ParentComponent from './pages/HOC/ParentComponent';
 import { HomeTemplate } from './templates/HomeTemplate';
 import { AdminTemplate } from './templates/AdminTemplate';
+import Checkout from './pages/Checkout/Checkout';
 
 function App() {
   return (
@@ -31,23 +32,24 @@ function App() {
           {/* <Route path="/home" component={Home} /> */}
           <HomeTemplate exact path="/home" Component={Home}/>
           <HomeTemplate path="/contact" Component={Contact} />
-          <Route path="/login" component={Login} />
-          <Route path="/register" component={Register} />
-          <Route path="/LifeCycle" render={(propsRoute) => {
+          <HomeTemplate path="/login" Component={Login} />
+          <HomeTemplate path="/register" Component={Register} />
+          <HomeTemplate path="/LifeCycle" render={(propsRoute) => {
             return <div>
               <h3>Component Lifecycle</h3>
               <Lifecycle{...propsRoute} />
             </div>
           }} />
-          <Route exact path="/usestateDemo" component={UseStateHook} />
-          <Route exact path="/usememo" component={HookUseDemo} />
-          <Route exact path="/useref" component={UseRef} />
-          <Route exact path="/carchoosing" component={BaiTapChonXe} />
-          <Route exact path="/useeffecthome" component={UseEffectHome} />
-          <Route exact path="/reduxhookhome" component={ReduxHookHome} />
-          <Route exact path="/hookusecallback" component={HookUseCallBack} />
-          <Route exact path="/details/:id" component={Details} />
-          <Route exact path="/demoprops" component={ParentComponent} />
+          <HomeTemplate exact path="/usestateDemo" Component={UseStateHook} />
+          <HomeTemplate exact path="/usememo" Component={HookUseDemo} />
+          <HomeTemplate exact path="/useref" Component={UseRef} />
+          <HomeTemplate exact path="/carchoosing" Component={BaiTapChonXe} />
+          <HomeTemplate exact path="/useeffecthome" Component={UseEffectHome} />
+          <HomeTemplate exact path="/reduxhookhome" Component={ReduxHookHome} />
+          <HomeTemplate exact path="/hookusecallback" Component={HookUseCallBack} />
+          <HomeTemplate exact path="/details/:id" Component={Details} />
+          <HomeTemplate exact path="/demoprops" Component={ParentComponent} />
+          <HomeTemplate exact path="/checkout/:id" Component={Checkout} />
 
           {/* //Route mac dinh de duoi cung cua ung dung */}
           <Route exact path="/" component={Home} />
